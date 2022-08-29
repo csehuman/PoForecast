@@ -16,6 +16,10 @@
 		DA8CDD8128BC6459008334FC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8028BC6459008334FC /* Common.swift */; };
 		DA8CDD8428BC7814008334FC /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8328BC7814008334FC /* SummaryTableViewCell.swift */; };
 		DA8CDD8628BC7826008334FC /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8528BC7826008334FC /* ForecastTableViewCell.swift */; };
+		DA8CDD8C28BCA782008334FC /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8B28BCA782008334FC /* ApiError.swift */; };
+		DA8CDD8E28BCA7A2008334FC /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8D28BCA7A2008334FC /* CurrentWeather.swift */; };
+		DA8CDD9028BCA7B1008334FC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8F28BCA7B1008334FC /* Forecast.swift */; };
+		DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		DA8CDD8528BC7826008334FC /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		DA8CDD8828BC86FC008334FC /* CurrentWeatherApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrentWeatherApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8CDD8928BC9CE3008334FC /* ForecastApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ForecastApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA8CDD8B28BCA782008334FC /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		DA8CDD8D28BCA7A2008334FC /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		DA8CDD8F28BCA7B1008334FC /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 		DA8CDD6B28BC6268008334FC /* PoForecast */ = {
 			isa = PBXGroup;
 			children = (
+				DA8CDD9128BCA7D3008334FC /* Data */,
+				DA8CDD8A28BCA774008334FC /* Model */,
 				DA8CDD8728BC86EA008334FC /* Api */,
 				DA8CDD8228BC77FA008334FC /* Cell */,
 				DA8CDD6C28BC6268008334FC /* AppDelegate.swift */,
@@ -94,6 +104,24 @@
 				DA8CDD8928BC9CE3008334FC /* ForecastApi.playground */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		DA8CDD8A28BCA774008334FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CDD8B28BCA782008334FC /* ApiError.swift */,
+				DA8CDD8D28BCA7A2008334FC /* CurrentWeather.swift */,
+				DA8CDD8F28BCA7B1008334FC /* Forecast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA8CDD9128BCA7D3008334FC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8CDD8C28BCA782008334FC /* ApiError.swift in Sources */,
 				DA8CDD8628BC7826008334FC /* ForecastTableViewCell.swift in Sources */,
+				DA8CDD8E28BCA7A2008334FC /* CurrentWeather.swift in Sources */,
 				DA8CDD8128BC6459008334FC /* Common.swift in Sources */,
+				DA8CDD9028BCA7B1008334FC /* Forecast.swift in Sources */,
 				DA8CDD7128BC6268008334FC /* ViewController.swift in Sources */,
 				DA8CDD6D28BC6268008334FC /* AppDelegate.swift in Sources */,
+				DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */,
 				DA8CDD8428BC7814008334FC /* SummaryTableViewCell.swift in Sources */,
 				DA8CDD6F28BC6268008334FC /* SceneDelegate.swift in Sources */,
 			);
