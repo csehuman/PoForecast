@@ -13,6 +13,7 @@
 		DA8CDD7428BC6268008334FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8CDD7228BC6268008334FC /* Main.storyboard */; };
 		DA8CDD7628BC626A008334FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8CDD7528BC626A008334FC /* Assets.xcassets */; };
 		DA8CDD7928BC626A008334FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8CDD7728BC626A008334FC /* LaunchScreen.storyboard */; };
+		DA8CDD8128BC6459008334FC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8028BC6459008334FC /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DA8CDD7528BC626A008334FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8CDD7828BC626A008334FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8CDD7A28BC626A008334FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8CDD8028BC6459008334FC /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DA8CDD7528BC626A008334FC /* Assets.xcassets */,
 				DA8CDD7728BC626A008334FC /* LaunchScreen.storyboard */,
 				DA8CDD7A28BC626A008334FC /* Info.plist */,
+				DA8CDD8028BC6459008334FC /* Common.swift */,
 			);
 			path = PoForecast;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8CDD8128BC6459008334FC /* Common.swift in Sources */,
 				DA8CDD7128BC6268008334FC /* ViewController.swift in Sources */,
 				DA8CDD6D28BC6268008334FC /* AppDelegate.swift in Sources */,
 				DA8CDD6F28BC6268008334FC /* SceneDelegate.swift in Sources */,
