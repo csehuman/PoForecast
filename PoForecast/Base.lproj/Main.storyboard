@@ -173,12 +173,18 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Fgv-s4-5W8"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-x3-f0A">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="czf-ls-5f6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0rL-iC-ckI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PBO-8L-EqV" secondAttribute="trailing" id="1N9-ha-wcD"/>
+                            <constraint firstItem="tQg-x3-f0A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4eP-dp-VLb"/>
+                            <constraint firstItem="tQg-x3-f0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6X5-lf-pTw"/>
                             <constraint firstItem="bR9-Oe-jYP" firstAttribute="leading" secondItem="cbJ-d7-rzN" secondAttribute="leading" id="AR4-1l-jmn"/>
                             <constraint firstItem="bR9-Oe-jYP" firstAttribute="trailing" secondItem="cbJ-d7-rzN" secondAttribute="trailing" id="IVO-Xo-ca4"/>
                             <constraint firstItem="cbJ-d7-rzN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LeI-n0-Rxl"/>
@@ -196,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="PBO-8L-EqV" id="X2l-w1-tFK"/>
+                        <outlet property="loader" destination="tQg-x3-f0A" id="N7X-Dg-9D5"/>
                         <outlet property="locationLabel" destination="WIR-L5-HRq" id="0cd-nF-Jc7"/>
                     </connections>
                 </viewController>
