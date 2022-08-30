@@ -1,3 +1,4 @@
+import Foundation
 struct Forecast: Codable {
     let cod: String
     let message: Int
@@ -21,4 +22,11 @@ struct Forecast: Codable {
     }
     
     let list: [ListItem]
+}
+
+struct ForecastData {
+    let date: Date
+    let icon: String
+    let weather: String
+    let temperature: Double
 }

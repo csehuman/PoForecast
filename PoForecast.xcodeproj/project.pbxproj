@@ -21,6 +21,7 @@
 		DA8CDD9028BCA7B1008334FC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD8F28BCA7B1008334FC /* Forecast.swift */; };
 		DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */; };
 		DA8CDD9628BCBC75008334FC /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */; };
+		DA8CDD9828BDB4C7008334FC /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DA8CDD8F28BCA7B1008334FC /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
+		DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */,
+				DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				DA8CDD8628BC7826008334FC /* ForecastTableViewCell.swift in Sources */,
 				DA8CDD8E28BCA7A2008334FC /* CurrentWeather.swift in Sources */,
 				DA8CDD9628BCBC75008334FC /* Double+Formatter.swift in Sources */,
+				DA8CDD9828BDB4C7008334FC /* Date+Formatter.swift in Sources */,
 				DA8CDD8128BC6459008334FC /* Common.swift in Sources */,
 				DA8CDD9028BCA7B1008334FC /* Forecast.swift in Sources */,
 				DA8CDD7128BC6268008334FC /* ViewController.swift in Sources */,
