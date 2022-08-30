@@ -13,6 +13,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var listTableView: UITableView!
     
+    var topInset = CGFloat(0.0)
+    
+    // view의 배치가 완료된 다음 호출
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if topInset == 0.0 {
+            let firstIndexPath = IndexPath(row: 0, section: 0)
+            if let cell = listTableView.cellForRow(at: firstIndexPath) {
+                topInset = listTableView.frame.height - cell.frame.height
+                
+                var inset = listTableView.contentInset
+                inset.top = topInset
+                listTableView.contentInset = inset
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
