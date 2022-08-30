@@ -22,6 +22,7 @@
 		DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */; };
 		DA8CDD9628BCBC75008334FC /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */; };
 		DA8CDD9828BDB4C7008334FC /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */; };
+		DA8CDD9B28BDB976008334FC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9A28BDB976008334FC /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
 		DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		DA8CDD9A28BDB976008334FC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		DA8CDD6B28BC6268008334FC /* PoForecast */ = {
 			isa = PBXGroup;
 			children = (
+				DA8CDD9928BDB96A008334FC /* Location */,
 				DA8CDD9428BCBC5A008334FC /* Formatter */,
 				DA8CDD9128BCA7D3008334FC /* Data */,
 				DA8CDD8A28BCA774008334FC /* Model */,
@@ -136,6 +139,14 @@
 				DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		DA8CDD9928BDB96A008334FC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CDD9A28BDB976008334FC /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */,
 				DA8CDD8428BC7814008334FC /* SummaryTableViewCell.swift in Sources */,
 				DA8CDD6F28BC6268008334FC /* SceneDelegate.swift in Sources */,
+				DA8CDD9B28BDB976008334FC /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
