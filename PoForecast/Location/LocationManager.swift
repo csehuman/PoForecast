@@ -83,8 +83,6 @@ extension LocationManager: CLLocationManagerDelegate {
                     self?.currentLocationTitle = placemark.name ?? "Unknown"
                 }
             }
-            
-            print(self?.currentLocationTitle)
         }
     }
     

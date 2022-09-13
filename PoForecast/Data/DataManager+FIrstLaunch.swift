@@ -35,17 +35,19 @@ extension DataManager {
     
     @available(iOS 14.0, *)
     func setUpCityList() {
-        let cities = CityJSON.parsed()
-        
-        guard !cities.isEmpty else { return }
-        
-        DataManager.shared.persistentContainer.performBackgroundTask { context in
-            let batchInsert = self.newBatchInsert(with: cities)
+        DispatchQueue.global().async {
+            let cities = CityJSON.parsed()
             
-            do {
-                try context.execute(batchInsert)
-            } catch {
-                print(error.localizedDescription)
+            guard !cities.isEmpty else { return }
+            
+            DataManager.shared.persistentContainer.performBackgroundTask { context in
+                let batchInsert = self.newBatchInsert(with: cities)
+                
+                do {
+                    try context.execute(batchInsert)
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }
     }

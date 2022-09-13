@@ -185,7 +185,7 @@ extension RegionListViewController: UITableViewDataSource, UITableViewDelegate {
         case searchResultTableView:
             return cityList.count
         case myRegionTableView:
-            return myRegionList.count
+            return myRegionList.count + 1
         default:
             fatalError("Unavailable Table")
         }
@@ -204,13 +204,20 @@ extension RegionListViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case myRegionTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SavedRegionTableViewCell", for: indexPath) as! SavedRegionTableViewCell
+            var searchKey = "0_My_Location_Weather"
             
-            let targetCity = myRegionList[indexPath.row]
+            if indexPath.row != 0 {
+                let targetCity = myRegionList[indexPath.row-1]
+                searchKey = String(targetCity.id)
+                
+                cell.cityLabel.text = targetCity.name
+                cell.timeLabel.text = Date().timeStringWithAmPm
+            } else {
+                cell.cityLabel.text = "나의 위치"
+                cell.timeLabel.text = "\(LocationManager.shared.currentLocationTitle ?? "알 수 없음")"
+            }
             
-            cell.cityLabel.text = targetCity.name
-            cell.timeLabel.text = Date().timeStringWithAmPm
-            
-            if let targetCityWeather = WeatherDataSource.shared.myWeatherList[targetCity] {
+            if let targetCityWeather = WeatherDataSource.shared.myWeatherList[searchKey] {
                 cell.currentWeatherLabel.text = targetCityWeather.weather.first?.description
                 cell.currentTempLabel.text = targetCityWeather.main.temp.temperatureString
                 cell.minMaxTempLabel.text = "최고: \(targetCityWeather.main.temp_max) 최저: \(targetCityWeather.main.temp_min)"
@@ -224,8 +231,8 @@ extension RegionListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "삭제") { (action, view, completion) in
-            DataManager.shared.removeCity(for: self.myRegionList[indexPath.row], in: DataManager.shared.mainContext)
-            self.myRegionList.remove(at: indexPath.row)
+            DataManager.shared.removeCity(for: self.myRegionList[indexPath.row-1], in: DataManager.shared.mainContext)
+            self.myRegionList.remove(at: indexPath.row-1)
             self.myRegionTableView.deleteRows(at: [indexPath], with: .automatic)
             completion(true)
         }
@@ -237,6 +244,10 @@ extension RegionListViewController: UITableViewDataSource, UITableViewDelegate {
         configuration.performsFirstActionWithFullSwipe = true
         
         return configuration
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.row != 0
     }
 }
 

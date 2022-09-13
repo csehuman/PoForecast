@@ -25,7 +25,7 @@ class WeatherDataSource {
     
     var summary: CurrentWeather?
     var forecastList = [ForecastData]()
-    var myWeatherList = [CityEntity: CurrentWeather]()
+    var myWeatherList = [String: CurrentWeather]()
     
     let apiQueue = DispatchQueue(label: "ApiQueue", attributes: .concurrent)
     let group = DispatchGroup()
@@ -38,7 +38,7 @@ class WeatherDataSource {
             self.fetchCurrentWeather(cityId: Int(city.id)) { result in
                 switch result {
                 case .success(let data):
-                    self.myWeatherList[city] = data
+                    self.myWeatherList[String(city.id)] = data
                 default:
                     break
                 }
@@ -46,6 +46,20 @@ class WeatherDataSource {
             }
         }
         
+        LocationManager.shared.updateLocation()
+        if let currentLocation = LocationManager.shared.currentLocation {
+            group.enter()
+            self.fetchCurrentWeather(location: currentLocation) { result in
+                switch result {
+                case .success(let data):
+                    self.myWeatherList["0_My_Location_Weather"] = data
+                default:
+                    break
+                }
+                self.group.leave()
+            }
+        }
+
         group.notify(queue: .main) {
             NotificationCenter.default.post(name: Self.weatherForCitiesDidFinishUpdate, object: nil)
         }

@@ -87,12 +87,18 @@ class ViewController: UIViewController {
                     self.myCurrentWeather = weather
                     self.alreadyHaveWeather = true
                 }
-                
-                print("My City: \(self.city?.name ?? "알 수 없음"), My Weather: \(self.myCurrentWeather?.main.temp.temperatureString ?? "0.0")")
             }
             
             self.listTableView.reloadData()
-            self.locationLabel.text = self.city?.name ?? "알 수 없음"//LocationManager.shared.currentLocationTitle
+            
+            
+            
+            if let city = self.city {
+                self.locationLabel.text = city.name ?? "알 수 없음"
+            } else {
+                self.locationLabel.text = LocationManager.shared.currentLocationTitle
+            }
+           //LocationManager.shared.currentLocationTitle
             
             UIView.animate(withDuration: 0.3) {
                 self.completeAllView(isAdding: self.inAddingState)

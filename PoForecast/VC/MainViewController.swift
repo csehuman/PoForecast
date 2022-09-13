@@ -55,16 +55,16 @@ class MainViewController: UIViewController {
     }
     
     func viewController(at index: Int) -> ViewController? {
-        if index >= dataSource.count || dataSource.count == 0 {
+        if index > dataSource.count {
             return nil
         }
         
         guard let viewController = storyboard?.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as? ViewController else {
             return nil
         }
-        
+    
         viewController.index = index
-        viewController.city = dataSource[index]
+        viewController.city = index != 0 ? dataSource[index-1] : nil
         print("\(index): \(viewController.city?.name ?? "알 수 없음")")
         
         return viewController
@@ -93,7 +93,7 @@ extension MainViewController: UIPageViewControllerDelegate, UIPageViewController
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return dataSource.count
+        return dataSource.count + 1
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -126,7 +126,7 @@ extension MainViewController: UIPageViewControllerDelegate, UIPageViewController
         
         currentViewControllerIndex = currentIndex
         
-        if currentIndex == dataSource.count-1 {
+        if currentIndex == dataSource.count {
             return nil
         }
         
