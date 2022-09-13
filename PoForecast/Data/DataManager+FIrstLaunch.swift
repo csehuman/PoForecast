@@ -24,11 +24,9 @@ extension DataManager {
                 city.code = data.country
                 city.latitude = data.coord.lat
                 city.longitude = data.coord.lon
-                print(city.id)
             }
             
             index += 1
-            print("Hi")
             return false
         }
         
