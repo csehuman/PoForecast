@@ -23,4 +23,11 @@ extension Date {
         dateFormatter.dateFormat = "HH:00"
         return dateFormatter.string(from: self)
     }
+    
+    var timeStringWithAmPm: String {
+        dateFormatter.dateFormat = "a hh:mm"
+        dateFormatter.amSymbol = "오전"
+        dateFormatter.pmSymbol = "오후"
+        return dateFormatter.string(from: self)
+    }
 }

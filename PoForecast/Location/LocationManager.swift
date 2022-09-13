@@ -77,8 +77,8 @@ extension LocationManager: CLLocationManagerDelegate {
             }
             
             if let placemark = placemarks?.first {
-                if let gu = placemark.locality, let dong = placemark.subLocality {
-                    self?.currentLocationTitle = "\(gu) \(dong)"
+                if let city = placemark.locality {
+                    self?.currentLocationTitle = "\(city)"
                 } else {
                     self?.currentLocationTitle = placemark.name ?? "Unknown"
                 }

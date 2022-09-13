@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA00CC2028BE4E8D00D3586C /* citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = DA00CC1F28BE4E8D00D3586C /* citylist.json */; };
+		DA00CC2928C1DFCC00D3586C /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00CC2828C1DFCC00D3586C /* CustomPageViewController.swift */; };
+		DA00CC2B28C1E08E00D3586C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00CC2A28C1E08E00D3586C /* MainViewController.swift */; };
+		DA00CC2D28C5EA6600D3586C /* SavedRegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00CC2C28C5EA6500D3586C /* SavedRegionTableViewCell.swift */; };
 		DA8CDD6D28BC6268008334FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD6C28BC6268008334FC /* AppDelegate.swift */; };
 		DA8CDD6F28BC6268008334FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD6E28BC6268008334FC /* SceneDelegate.swift */; };
 		DA8CDD7128BC6268008334FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD7028BC6268008334FC /* ViewController.swift */; };
@@ -23,9 +27,19 @@
 		DA8CDD9628BCBC75008334FC /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */; };
 		DA8CDD9828BDB4C7008334FC /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */; };
 		DA8CDD9B28BDB976008334FC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9A28BDB976008334FC /* LocationManager.swift */; };
+		DA8CDD9F28BE1043008334FC /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDD9E28BE1043008334FC /* RegionListViewController.swift */; };
+		DA8CDDA428BE2219008334FC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDDA328BE2218008334FC /* DataManager.swift */; };
+		DA8CDDA728BE22F8008334FC /* PoForecast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDDA528BE22F8008334FC /* PoForecast.xcdatamodeld */; };
+		DA8CDDAC28BE4383008334FC /* RawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDDAB28BE4383008334FC /* RawData.swift */; };
+		DA8CDDAE28BE486C008334FC /* DataManager+FIrstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDDAD28BE486C008334FC /* DataManager+FIrstLaunch.swift */; };
+		DA8CDDB028BE4915008334FC /* DataManager+CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CDDAF28BE4915008334FC /* DataManager+CRUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA00CC1F28BE4E8D00D3586C /* citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citylist.json; sourceTree = "<group>"; };
+		DA00CC2828C1DFCC00D3586C /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		DA00CC2A28C1E08E00D3586C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA00CC2C28C5EA6500D3586C /* SavedRegionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRegionTableViewCell.swift; sourceTree = "<group>"; };
 		DA8CDD6928BC6268008334FC /* PoForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8CDD6C28BC6268008334FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8CDD6E28BC6268008334FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +60,12 @@
 		DA8CDD9528BCBC75008334FC /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
 		DA8CDD9728BDB4C7008334FC /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		DA8CDD9A28BDB976008334FC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DA8CDD9E28BE1043008334FC /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
+		DA8CDDA328BE2218008334FC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DA8CDDA628BE22F8008334FC /* PoForecast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoForecast.xcdatamodel; sourceTree = "<group>"; };
+		DA8CDDAB28BE4383008334FC /* RawData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawData.swift; sourceTree = "<group>"; };
+		DA8CDDAD28BE486C008334FC /* DataManager+FIrstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+FIrstLaunch.swift"; sourceTree = "<group>"; };
+		DA8CDDAF28BE4915008334FC /* DataManager+CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+CRUD.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA00CC2128C0871100D3586C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CDD7028BC6268008334FC /* ViewController.swift */,
+				DA8CDD9E28BE1043008334FC /* RegionListViewController.swift */,
+				DA00CC2828C1DFCC00D3586C /* CustomPageViewController.swift */,
+				DA00CC2A28C1E08E00D3586C /* MainViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		DA8CDD6028BC6268008334FC = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +109,8 @@
 		DA8CDD6B28BC6268008334FC /* PoForecast */ = {
 			isa = PBXGroup;
 			children = (
+				DA00CC2128C0871100D3586C /* VC */,
+				DA8CDDA828BE423E008334FC /* RawData */,
 				DA8CDD9928BDB96A008334FC /* Location */,
 				DA8CDD9428BCBC5A008334FC /* Formatter */,
 				DA8CDD9128BCA7D3008334FC /* Data */,
@@ -86,7 +119,6 @@
 				DA8CDD8228BC77FA008334FC /* Cell */,
 				DA8CDD6C28BC6268008334FC /* AppDelegate.swift */,
 				DA8CDD6E28BC6268008334FC /* SceneDelegate.swift */,
-				DA8CDD7028BC6268008334FC /* ViewController.swift */,
 				DA8CDD7228BC6268008334FC /* Main.storyboard */,
 				DA8CDD7528BC626A008334FC /* Assets.xcassets */,
 				DA8CDD7728BC626A008334FC /* LaunchScreen.storyboard */,
@@ -101,6 +133,7 @@
 			children = (
 				DA8CDD8328BC7814008334FC /* SummaryTableViewCell.swift */,
 				DA8CDD8528BC7826008334FC /* ForecastTableViewCell.swift */,
+				DA00CC2C28C5EA6500D3586C /* SavedRegionTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -120,6 +153,7 @@
 				DA8CDD8B28BCA782008334FC /* ApiError.swift */,
 				DA8CDD8D28BCA7A2008334FC /* CurrentWeather.swift */,
 				DA8CDD8F28BCA7B1008334FC /* Forecast.swift */,
+				DA8CDDA528BE22F8008334FC /* PoForecast.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				DA8CDD9228BCA7E0008334FC /* WeatherDataSource.swift */,
+				DA8CDDA328BE2218008334FC /* DataManager.swift */,
+				DA8CDDAF28BE4915008334FC /* DataManager+CRUD.swift */,
+				DA8CDDAD28BE486C008334FC /* DataManager+FIrstLaunch.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -147,6 +184,15 @@
 				DA8CDD9A28BDB976008334FC /* LocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		DA8CDDA828BE423E008334FC /* RawData */ = {
+			isa = PBXGroup;
+			children = (
+				DA00CC1F28BE4E8D00D3586C /* citylist.json */,
+				DA8CDDAB28BE4383008334FC /* RawData.swift */,
+			);
+			path = RawData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +255,7 @@
 			files = (
 				DA8CDD7928BC626A008334FC /* LaunchScreen.storyboard in Resources */,
 				DA8CDD7628BC626A008334FC /* Assets.xcassets in Resources */,
+				DA00CC2028BE4E8D00D3586C /* citylist.json in Resources */,
 				DA8CDD7428BC6268008334FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,15 +267,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8CDD9F28BE1043008334FC /* RegionListViewController.swift in Sources */,
+				DA00CC2B28C1E08E00D3586C /* MainViewController.swift in Sources */,
+				DA8CDDA428BE2219008334FC /* DataManager.swift in Sources */,
 				DA8CDD8C28BCA782008334FC /* ApiError.swift in Sources */,
 				DA8CDD8628BC7826008334FC /* ForecastTableViewCell.swift in Sources */,
 				DA8CDD8E28BCA7A2008334FC /* CurrentWeather.swift in Sources */,
+				DA8CDDA728BE22F8008334FC /* PoForecast.xcdatamodeld in Sources */,
 				DA8CDD9628BCBC75008334FC /* Double+Formatter.swift in Sources */,
 				DA8CDD9828BDB4C7008334FC /* Date+Formatter.swift in Sources */,
+				DA8CDDB028BE4915008334FC /* DataManager+CRUD.swift in Sources */,
 				DA8CDD8128BC6459008334FC /* Common.swift in Sources */,
+				DA00CC2D28C5EA6600D3586C /* SavedRegionTableViewCell.swift in Sources */,
 				DA8CDD9028BCA7B1008334FC /* Forecast.swift in Sources */,
 				DA8CDD7128BC6268008334FC /* ViewController.swift in Sources */,
 				DA8CDD6D28BC6268008334FC /* AppDelegate.swift in Sources */,
+				DA00CC2928C1DFCC00D3586C /* CustomPageViewController.swift in Sources */,
+				DA8CDDAC28BE4383008334FC /* RawData.swift in Sources */,
+				DA8CDDAE28BE486C008334FC /* DataManager+FIrstLaunch.swift in Sources */,
 				DA8CDD9328BCA7E0008334FC /* WeatherDataSource.swift in Sources */,
 				DA8CDD8428BC7814008334FC /* SummaryTableViewCell.swift in Sources */,
 				DA8CDD6F28BC6268008334FC /* SceneDelegate.swift in Sources */,
@@ -452,6 +508,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA8CDDA528BE22F8008334FC /* PoForecast.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA8CDDA628BE22F8008334FC /* PoForecast.xcdatamodel */,
+			);
+			currentVersion = DA8CDDA628BE22F8008334FC /* PoForecast.xcdatamodel */;
+			path = PoForecast.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA8CDD6128BC6268008334FC /* Project object */;
 }

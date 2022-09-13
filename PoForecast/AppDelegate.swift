@@ -7,6 +7,8 @@
 
 import UIKit
 
+let initialLaunchKey = "initialLaunchKey"
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +17,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(1)
+        
+        if !UserDefaults.standard.bool(forKey: initialLaunchKey) {
+            UserDefaults.standard.set(true, forKey: initialLaunchKey)
+            
+            if #available(iOS 14.0, *) {
+                DataManager.shared.setUpCityList()
+            } else {
+                // Fallback on earlier versions
+            }
+
+            print("Initial Launch")
+        }
+        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().isTranslucent = true
+        
+        let pageControl = UIPageControl.appearance()
+        pageControl.currentPageIndicatorTintColor = .white
+        pageControl.pageIndicatorTintColor = .lightGray
+        pageControl.backgroundColor = .clear
+        
         return true
     }
 

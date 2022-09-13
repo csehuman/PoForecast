@@ -21,12 +21,35 @@ class WeatherDataSource {
     }
     
     static let weatherInfoDidUpdate = Notification.Name(rawValue: "weatherInfoDidUpdate")
+    static let weatherForCitiesDidFinishUpdate = Notification.Name(rawValue: "weatherForCitiesDidFinishUpdate")
     
     var summary: CurrentWeather?
     var forecastList = [ForecastData]()
+    var myWeatherList = [CityEntity: CurrentWeather]()
     
     let apiQueue = DispatchQueue(label: "ApiQueue", attributes: .concurrent)
     let group = DispatchGroup()
+    
+    func fetchWeatherForCities(cityList: [CityEntity], completion: (() -> ())?) {
+        myWeatherList = [:]
+        
+        for city in cityList {
+            group.enter()
+            self.fetchCurrentWeather(cityId: Int(city.id)) { result in
+                switch result {
+                case .success(let data):
+                    self.myWeatherList[city] = data
+                default:
+                    break
+                }
+                self.group.leave()
+            }
+        }
+        
+        group.notify(queue: .main) {
+            NotificationCenter.default.post(name: Self.weatherForCitiesDidFinishUpdate, object: nil)
+        }
+    }
     
     func fetch(location: CLLocation, completion: @escaping () -> ()) {
         group.enter()
